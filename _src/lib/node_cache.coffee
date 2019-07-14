@@ -16,7 +16,7 @@ module.exports = class NodeCache extends EventEmitter
 	constructor: ( @options = {} )->
 		super()
 
-		@_initErrors()
+		#@_initErrors()
 		# container for cached data
 		@data = {}
 
@@ -216,7 +216,7 @@ module.exports = class NodeCache extends EventEmitter
 	#
 	# **Parameters:**
 	#
-	# * `keys` ( String | Number | String|Number[] ): cache key to delete or a array of cache keys
+	# * `keys` ( String | Number | String|Number[] ): cache key to delete or a array of cache keys
 	# * `[cb]` ( Function ): Callback function
 	#
 	# **Return**
@@ -610,12 +610,11 @@ module.exports = class NodeCache extends EventEmitter
 	# ## _initErrors
 	#
 	# internal method to generate error message templates
-	_initErrors: =>
-		@ERRORS = {}
-		for _errT, _errMsg of @_ERRORS
+	#_initErrors: =>
+		#@ERRORS = {}
+		#for _errT, _errMsg of @_ERRORS
 			#@ERRORS[ _errT ] = _template( _errMsg )
-
-		return
+		#return
 
 	_ERRORS:
 		"ENOTFOUND": "Key `<%= key %>` not found"
