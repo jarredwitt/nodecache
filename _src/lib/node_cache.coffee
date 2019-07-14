@@ -6,7 +6,7 @@ _isFunction = require( "lodash/isFunction" )
 _isNumber = require( "lodash/isNumber" )
 _isObject = require( "lodash/isObject" )
 _size = require( "lodash/size" )
-_template = require( "lodash/template" )
+#_template = require( "lodash/template" )
 
 clone = require( "clone" )
 EventEmitter = require('events').EventEmitter
@@ -613,7 +613,7 @@ module.exports = class NodeCache extends EventEmitter
 	_initErrors: =>
 		@ERRORS = {}
 		for _errT, _errMsg of @_ERRORS
-			@ERRORS[ _errT ] = _template( _errMsg )
+			#@ERRORS[ _errT ] = _template( _errMsg )
 
 		return
 
